@@ -1,8 +1,9 @@
 <?php
 
-class FifoArray
+class FifoQueue
 {
     public function __construct()
     {
+        echo "eae";
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace stack;
+namespace Stack;
 
 #LIFO STRUCTURE
 #Handmade
-class stack
+class StackLifo
 {
     private int $size;
     private array $structure;
@@ -62,12 +62,13 @@ class stack
     }
 }
 
-$stack = new stack();
+$stack = new StackLifo();
 
 for ($i = 0; $i < 10; $i++) {
     $stack->push($i);
 }
 
+$stack->pop();
 $stack->pop();
 
 var_dump($stack->itemsStack());
