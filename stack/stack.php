@@ -7,15 +7,13 @@ namespace stack;
 class stack
 {
     private int $size;
-
     private array $structure;
-
-    const MAX_WIDTH = 592734987549723473;
+    const MAX_WIDTH = 11;
 
     public function __construct()
     {
-        // $this->size = 0;
-        // $this->structure = [];
+        $this->size = 0;
+        $this->structure = [];
     }
 
     public function __destruct()
@@ -32,10 +30,11 @@ class stack
             $this->size++;
         }
     }
+
     public function pop(): void
     {
         if ($this->empty()) {
-            echo 'This structure is empty';
+            echo 'this structure is empty';
         } else {
             unset($this->structure[$this->size - 1]);
             $this->size--;
@@ -47,11 +46,12 @@ class stack
         return empty($this->structure);
     }
 
-    public function getSizeStructure(): array
+    public function getInfoStructure(): array
     {
+        $array = [];
         $array = [
-            'size' => count($this->structure),
-            'memory_used' => memory_get_usage() / 1024 / 1024
+            "size" => count($this->structure),
+            "memory_used" => memory_get_usage() / 1024 / 1024
         ];
         return $array;
     }
@@ -71,10 +71,3 @@ for ($i = 0; $i < 10; $i++) {
 $stack->pop();
 
 var_dump($stack->itemsStack());
-
-#using function php
-
-// $structure = [];
-// array_push($structure, 'item one');
-
-// var_dump($structure);

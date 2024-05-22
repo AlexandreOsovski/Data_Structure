@@ -354,7 +354,7 @@ class stack {
 
 ### Construindo a Lógica do Método `itemsStack`
 
-Neste método, a lógica é simples: retorna a estrutura da pilha usando a função `var_dump()`. Essa função exibe informações sobre a estrutura da pilha, incluindo todos os itens presentes nela.
+Neste método, a lógica é simples: retorna a estrutura da pilha. Essa função exibe informações sobre a estrutura da pilha, incluindo todos os itens presentes nela.
 
 ```php
 <?php
@@ -412,7 +412,7 @@ class stack {
 
     public function itemsStack():array
     {
-        var_dump($this->structure);
+       return $this->structure;
     }
 }
 ?>
