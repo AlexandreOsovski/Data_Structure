@@ -8,14 +8,14 @@ class stack
 {
     private int $size;
 
-    private array $structure = [];
+    private array $structure;
 
     const MAX_WIDTH = 592734987549723473;
 
     public function __construct()
     {
-        $this->size = 0;
-        $this->structure = [];
+        // $this->size = 0;
+        // $this->structure = [];
     }
 
     public function __destruct()
@@ -55,6 +55,11 @@ class stack
         ];
         return $array;
     }
+
+    public function itemsStack(): array
+    {
+        return $this->structure;
+    }
 }
 
 $stack = new stack();
@@ -65,11 +70,11 @@ for ($i = 0; $i < 10; $i++) {
 
 $stack->pop();
 
-// var_dump($stack->getSizeStructure());
+var_dump($stack->itemsStack());
 
 #using function php
 
-$structure = [];
-array_push($structure, 'item one');
+// $structure = [];
+// array_push($structure, 'item one');
 
-var_dump($structure);
+// var_dump($structure);
